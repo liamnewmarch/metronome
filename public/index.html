@@ -4,20 +4,20 @@
     <meta charset="utf-8">
     <meta content="initial-scale=1, user-scalable=no" name="viewport">
     <meta content="#272822" name="theme-color">
-    <title> Metronome </title>
+    <title> Pocket Metronome </title>
     <link rel="shortcut icon" href="/icon.png" type="image/png">
     <link href="index.css" rel="stylesheet">
     <link href="manifest.json" rel="manifest">
   </head>
   <body>
-    <h1 class="header"> Metronome </h1>
-    <x-metronome class="metronome">
+    <h1 class="header"> Pocket Metronome </h1>
+    <pocket-metronome class="metronome">
       <div class="metronome-body">
         <input class="metronome-arm" max="208" min="40" orient="vertical" step="2" type="range" value="120">
       </div>
       <div class="tempo"> Tempo <span class="tempo-value"></span></div>
       <button class="button"> Start / Stop </button>
-    </x-metronome>
+    </pocket-metronome>
     <script src="index.js" type="module"></script>
   </body>
 </html>

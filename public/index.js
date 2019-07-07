@@ -1,6 +1,6 @@
-import MetronomeElement from './lib/MetronomeElement.js';
+import PocketMetronome from './lib/PocketMetronome.js';
 
-customElements.define('x-metronome', MetronomeElement);
+customElements.define('pocket-metronome', PocketMetronome);
 
 try {
   navigator.serviceWorker.register('/service-worker.js');
