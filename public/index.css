@@ -1,0 +1,75 @@
+* {
+  box-sizing: inherit;
+}
+
+html {
+  background-color: #272822;
+  box-sizing: border-box;
+  color: #fff;
+  font: 300 18px sans-serif;
+  letter-spacing: .1em;
+  text-align: center;
+  text-transform: lowercase;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  display: flex;
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: [header-start metronome-start tempo-start] 1fr [header-end metronome-end tempo-end];
+  grid-template-rows: [header-start] auto [header-end metronome-start] 1fr [metronome-end tempo-start] auto [tempo-end button-start] auto [button-end];
+  height: 100vh;
+  margin: 0;
+  padding: 2em;
+}
+
+input[type="range"][orient="vertical"] {
+  -webkit-appearance: slider-vertical;
+  transform: rotate(180deg);
+  writing-mode: tb-lr;
+}
+
+.header {
+  all: unset;
+  grid-area: header;
+  text-align: center;
+}
+
+.metronome {
+  background-color: #fff;
+  display: contents;
+}
+
+.metronome-body {
+  align-self: center;
+  background-color: #fff2;
+  clip-path: polygon(25% 0, 75% 0, 100% 100%, 0 100%);
+  display: flex;
+  grid-area: metronome;
+  height: 50vh;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2em;
+  width: 30.9vh;
+}
+
+.tempo {
+  color: #fffb;
+  grid-area: tempo;
+}
+
+.button {
+  all: unset;
+  background-color: #fff2;
+  margin: 0 auto;
+  padding: 1em 2em;
+}
+
+.button:focus {
+  outline: 1px solid #fff;
+}
+
+.metronome[playing] .button {
+  background-color: #fff4;
+}
