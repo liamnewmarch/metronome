@@ -1,11 +1,37 @@
+:root {
+  --color-background: #272822;
+  --color-background-emphasis: #fff2;
+
+  --color-text: #fff;
+  --color-text-deemphasis: #fffb;
+
+  --color-button: #fff2;
+  --color-button-playing: #fff4;
+  --color-button-focus: var(--color-text);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-background: #fff;
+    --color-background-emphasis: #27282222;
+
+    --color-text: #272822;
+    --color-text-deemphasis: #272822bb;
+
+    --color-button: #27282222;
+    --color-button-playing: #27282244;
+    --color-button-focus: var(--color-text);
+  }
+}
+
 * {
   box-sizing: inherit;
 }
 
 html {
-  background-color: #272822;
+  background-color: var(--color-background);
   box-sizing: border-box;
-  color: #fff;
+  color: var(--color-text);
   font: 300 18px sans-serif;
   letter-spacing: .1em;
   text-align: center;
@@ -37,13 +63,12 @@ input[type="range"][orient="vertical"] {
 }
 
 .metronome {
-  background-color: #fff;
   display: contents;
 }
 
 .metronome-body {
   align-self: center;
-  background-color: #fff2;
+  background-color: var(--color-background-emphasis);
   clip-path: polygon(25% 0, 75% 0, 100% 100%, 0 100%);
   display: flex;
   grid-area: metronome;
@@ -55,21 +80,21 @@ input[type="range"][orient="vertical"] {
 }
 
 .tempo {
-  color: #fffb;
+  color: var(--color-text-deemphasis);
   grid-area: tempo;
 }
 
 .button {
   all: unset;
-  background-color: #fff2;
+  background-color: var(--color-button);
   margin: 0 auto;
   padding: 1em 2em;
 }
 
 .button:focus {
-  outline: 1px solid #fff;
+  outline: 1px solid var(--color-button-focus);
 }
 
 .metronome[playing] .button {
-  background-color: #fff4;
+  background-color: var(--color-button-playing);
 }
