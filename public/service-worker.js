@@ -8,7 +8,7 @@ const files = [
   '/lib/audio.js',
   '/lib/createTick.js',
   '/lib/Metronome.js',
-  '/lib/MetronomeElement.js',
+  '/lib/PocketMetronome.js',
   '/lib/NoiseBuffer.js',
   '/lib/WhiteNoiseNode.js',
 ];
