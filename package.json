@@ -1,0 +1,17 @@
+{
+  "name": "metronome",
+  "version": "1.0.0",
+  "description": "Metronome PWA",
+  "private": true,
+  "scripts": {
+    "deploy": "npm run test && firebase deploy",
+    "serve": "firebase serve",
+    "start": "npm run serve",
+    "test": "eslint public"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "eslint-config-google": "^0.13.0",
+    "firebase-tools": "^7.0.2"
+  }
+}
